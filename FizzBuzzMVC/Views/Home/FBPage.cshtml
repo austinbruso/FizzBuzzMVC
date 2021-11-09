@@ -1,0 +1,36 @@
+﻿@model FizzBuzzMVC.Models.FizzBuzz
+
+<div class="container col-xxl-8 px-4 py-5 mt-5">
+    <div class="row gy-2 h-100 row-cols-md-2 row-cols-1">
+        <div class="col border-2 border-end">
+            <h1 class="font-weight-bold lh-1 mb-3">FizzBuzz</h1>
+            <h4 class="lead">
+                When it counts you Fizz Buzz. A coding exercise using loops. Write a program that prints the numbers from 1 to 100 and for multiples of '3' display "Fizz" instead of the number and for the multiples of '5' display "Buzz". If a multiple of both display "FizzBuzz".
+
+            </h4>
+            <h2 class="mt-5 border-bottom border-2">Instructions</h2>
+            <p>Enter a fizz and a buzz value. Press the button and the values will appear.</p>
+        </div>
+        <div class="col">
+            <div>
+                <h5>Enter Numbers</h5>
+                @*Form goes Here*@
+            <form asp-controller="Home" asp-action="FBPage" method="post">
+                <div class="form-group">
+                    <label asp-for="FizzValue">Fizz Value</label>
+                    <input type="number" asp-for="FizzValue" class="form-control" placeholder="Enter Fizz" value="@Model.FizzValue" />
+                </div>
+                <div class="form-group">
+                    <label asp-for="BuzzValue">Fizz Value</label>
+                    <input type="number" asp-for="BuzzValue" class="form-control" placeholder="Enter Buzz" value="@Model.BuzzValue" />
+                </div>
+                <button type="submit" class="btn btn-dark">Submit</button>
+            </form>
+                <h2 class="mt-5 border-bottom border-2">Results</h2>
+                <div class="table-responsive">
+                @*Table goes here*@
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
