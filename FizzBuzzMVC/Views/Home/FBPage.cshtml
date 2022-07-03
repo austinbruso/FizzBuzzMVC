@@ -4,7 +4,7 @@
     <div class="row gy-2 h-100 row-cols-md-2 row-cols-1">
         <div class="col border-2 border-end">
             <h1 class="font-weight-bold lh-1 mb-3">FizzBuzz</h1>
-            <h4 class="lead">
+            <h4 class="lead" style="color: blue;">
                 When it counts you Fizz Buzz. A coding exercise using loops. Write a program that prints the numbers from 1 to 100 and for multiples of '3' display "Fizz" instead of the number and for the multiples of '5' display "Buzz". If a multiple of both display "FizzBuzz".
 
             </h4>
@@ -13,7 +13,7 @@
         </div>
         <div class="col">
             <div>
-                <h5>Enter Numbers</h5>
+                <h5 class="font-weight-bold">Enter Numbers</h5>
                 @*Form goes Here*@
                 <form asp-controller="Home" asp-action="FBPage" method="post">
                     <div class="form-group">
@@ -24,7 +24,7 @@
                         <label asp-for="BuzzValue">Fizz Value</label>
                         <input type="number" asp-for="BuzzValue" class="form-control" placeholder="Enter Buzz" value="@Model.BuzzValue" />
                     </div>
-                    <button type="submit" class="btn btn-dark">Submit</button>
+                    <button type="submit" class="btn mt-3 bg-primary text-white">Submit</button>
                 </form>
                 <h2 class="mt-5 border-bottom border-2">Results</h2>
                 <div class="table-responsive">

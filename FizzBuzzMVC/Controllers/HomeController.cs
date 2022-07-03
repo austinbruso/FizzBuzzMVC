@@ -18,9 +18,12 @@ namespace FizzBuzzMVC.Controllers
             _logger = logger;
         }
 
+
+
         public IActionResult Index()
         {
-            return View();
+
+            return RedirectToAction("FBPage");
         }
 
         public IActionResult Privacy()
